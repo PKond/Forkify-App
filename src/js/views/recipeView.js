@@ -2,7 +2,7 @@ import View from './View.js';
 
 //import icons from '../img/icons.svg'; //Parcel 1
 import icons from 'url:../../img/icons.svg'; //Parcel 2
-import { Fraction } from 'fractional';
+import fracty from 'fracty';
 // console.log(Fractional);
 
 class RecipeView extends View {
@@ -56,7 +56,7 @@ class RecipeView extends View {
 		<div class="recipe__user-generated">
 
 		</div>
-		
+
 		<button class="btn--round">
 		  <svg class="">
 			<use href="${icons}#icon-bookmark-fill"></use>
@@ -97,7 +97,7 @@ class RecipeView extends View {
                 <svg class="recipe__icon">
                     <use href="${icons}#icon-check"></use>
                 </svg>
-                <div class="recipe__quantity">${ing.quantity ? new Fraction(ing.quantity).toString() : ''}</div>
+                <div class="recipe__quantity">${ing.quantity ? fracty(ing.quantity).toString() : ''}</div>
                 <div class="recipe__description">
                     <span class="recipe__unit">${ing.unit}</span>
                     ${ing.description}
