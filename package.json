@@ -4,7 +4,8 @@
   "description": "Recipe Application",
   "scripts": {
     "start": "parcel index.html",
-    "build": "parcel build index.html"
+    "build": "rm -rf dist .parcel-cache && parcel build src/index.html",
+    "dev": "rm -rf dist-dev .parcel-cache && parcel --dist-dir dist-dev src/index.html"
   },
   "author": "Pandelis Kondos",
   "license": "ISC",
